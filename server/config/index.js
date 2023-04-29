@@ -32,9 +32,9 @@ const config = {
     expiresIn: '720h' // token 有效期
   },
   DATABASE: {
-    database: 'test',
+    database: 'blog_db',
     user: 'root',
-    password: '123456',
+    password: 'admin123',
     options: {
       host: 'localhost', // 连接的 host 地址
       dialect: 'mysql', // 连接到 mysql
