@@ -3,6 +3,7 @@ const koaBody = require('koa-body')
 const cors = require('koa2-cors')
 const error = require('koa-json-error')
 const logger = require('koa-logger')
+const KoaStatic = require('koa-static')
 
 //  config
 const config = require('./config')
@@ -33,6 +34,9 @@ app
         maxFileSize: 2000 * 1024 * 1024 // 设置上传文件大小最大限制，默认20M
       }
     })
+  )
+  .use(
+    KoaStatic(path.join(__dirname, './webapp'))
   )
   .use(
     error({
